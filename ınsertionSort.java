@@ -24,18 +24,16 @@ public class ınsertionSort {
 
     //2.adım
     public static void insertionSort(int[] array){
-        int n = array.length;
-
-        for(int i = 1;i<n;i++){
+        
+        for(int i = 1;i<array.length;i++){
             int key=array[i];//sıradaki elemanı seçmek arrayin 1.elemanı demek dizinin 2.elemanı aslında sağı solla kıyaslamak için key değerini yani 2.elemana atadık
             int j = i-1;
 
             //key den büyük elemanları sağa kaydırma işlemi
-            while(j>=0 && array[j]>key){
-                array[j+1]=array[j];
+            while(j>=0 && array[j]>key) {
+                array[j + 1] = array[j];
                 j--;
             }
-
             //keyi doğru konuma götürmek
             array[j+1]=key;
 
